@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-agent-optim"
+version = "0.1.0"
+description = "An agentic optimization framework that combines LLM reasoning, retrieval-augmented physics priors, feasibility critics and trajectory memory for hard-constrained physical design problems."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "The Authors" }]
+
+# Core runtime dependencies for the agent itself.  Case-specific simulators
+# (PyAEDT for case_actuator, SolidWorks/Adams for case_robot_leg) are NOT listed
+# here because they require commercial licences; see docs/reproduce.md.
+dependencies = [
+    "openai>=1.40",
+    "loguru>=0.7",
+    "mcp[cli]>=1.7",
+    "numpy>=1.24",
+    "pyyaml>=6.0",
+    "pypdf>=4.0",
+    "pymupdf>=1.24",
+    "python-docx>=1.1",
+]
+
+[project.optional-dependencies]
+# Classical and learned optimiser baselines for both case studies.
+bo = [
+    "torch>=2.3",
+    "scikit-learn>=1.3",
+    "scikit-optimize>=0.10",
+]
+# SMAC baseline.
+smac = [
+    "smac>=2.0",
+]
+# Optional: build the documentation.
+docs = [
+    "mkdocs>=1.6",
+    "mkdocs-material>=9.5",
+    "mkdocstrings[python]>=0.25",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mymcp*"]
+
+[tool.setuptools.package-data]
+mymcp = ["**/*.yaml", "**/*.json"]

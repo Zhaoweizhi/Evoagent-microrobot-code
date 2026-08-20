@@ -1,0 +1,104 @@
+# =====================================================================
+# Python build / cache artefacts
+# =====================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+.installed.cfg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# =====================================================================
+# Virtual environments / IDE
+# =====================================================================
+.venv/
+venv/
+env/
+.env
+.env.*
+!env.example
+*.pem
+*.key
+*api_key*
+*apikey*
+*secret*
+.vscode/
+.idea/
+*.swp
+
+# =====================================================================
+# Experimental artefacts generated during local optimisation runs.
+# =====================================================================
+logs/
+maxwell_outputs/
+ga_runs/
+package/
+**/package/
+**/AgenticOPT_*_experience/
+**/*_experience/
+AgenticOPT_*.csv
+GA_results_*.csv
+BO_results_*.csv
+BORE_results_*.csv
+PSO_results_*.csv
+SMAC_results_*.csv
+PFN_CEI_results_*.csv
+POM_results_*.csv
+RobotLeg_*.csv
+optimization_results_*.csv
+*_checkpoint.pkl
+*.pkl
+ablation_*.csv
+ablation_*.png
+batch.log
+*.log
+*.aedt
+*.aedtresults/
+*.fld
+*.asol
+*.asol_priv
+*.SLDASM
+*.SLDPRT
+*.SLDDRW
+*.sldasm
+*.sldprt
+*.slddrw
+*.cmd
+*.adm
+*.res
+*.gra
+*.msg
+*.x_t
+
+# =====================================================================
+# RAG cache and feedback storage (regenerated automatically)
+# =====================================================================
+**/.rag_cache.json
+feedback_storage.json
+feedback_input.txt
+strategy_state_*.json
+distilled_principles.json
+
+# =====================================================================
+# Local literature corpus (PDFs are not redistributed with the code)
+# =====================================================================
+liter/
+liter_robot/
+
+# =====================================================================
+# OS / misc
+# =====================================================================
+.DS_Store
+Thumbs.db
+*.tmp
+Untitled
+temp_doc.txt

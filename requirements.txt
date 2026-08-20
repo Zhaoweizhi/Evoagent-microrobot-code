@@ -1,0 +1,18 @@
+# Core runtime dependencies for the LLM-Agent optimization framework.
+# Equivalent to `pip install -e .` from the repository root.
+
+openai>=1.40
+loguru>=0.7
+mcp[cli]>=1.7
+numpy>=1.24
+pyyaml>=6.0
+pypdf>=4.0
+pymupdf>=1.24
+python-docx>=1.1
+
+# Optional: classical and learned optimiser baselines
+# (uncomment to install)
+# torch>=2.3
+# scikit-learn>=1.3
+# scikit-optimize>=0.10
+# smac>=2.0
